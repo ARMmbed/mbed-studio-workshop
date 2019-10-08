@@ -419,8 +419,8 @@ blockquote {
 <h2 id="5-connect-a-board">5. Connect a board</h2>
 <p>Connect <a href="https://os.mbed.com/platforms/ST-Discovery-L475E-IOT01A/">DISCO-L475VG-IOT01A</a> board to laptop using micro USB cable.
 Mbed Studio should recognise the board and allow user to select it for main program.</p>
-<img src="./images/studio_device_connection.png" width="800">
 <p><strong>Important</strong>: Use micro usb port on the board marked as <code>USB STLINK</code> !</p>
+<img src="./images/studio_device_connection.png" width="800">
 <p>A green usb icon should appear next to the target indicating that board is connected. Deploy and Debug buttons should be now enabled.</p>
 <img src="./images/studio_connected_target.png" width="400">
 <p>Serial monitor should be automatically attached:</p>
@@ -445,9 +445,11 @@ Mbed Studio should recognise the board and allow user to select it for main prog
 </ol>
 <img src="./images/login_api_key.png" width="800">
 <p>Select either Developers or Administrators group.
-Copy api key after creation.
-7. Paste api key in Mbed Studio:
-<img src="./images/studio_api_key_add.png" width="800"></p>
+Copy api key after creation.</p>
+<ol start="7">
+<li>Paste api key in Mbed Studio:</li>
+</ol>
+<img src="./images/studio_api_key_add.png" width="800">
 <h2 id="7-connect-to-pelion-device-management">7. Connect to Pelion Device Management</h2>
 <ol>
 <li>Copy <code>DISCO_L475VG_IOT01A</code> targets settings from <code>configs/wifi.json</code> into <code>mbed_app.json</code>:</li>

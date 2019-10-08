@@ -49,9 +49,9 @@ Open Libraries panel from menu: `View->Libraries`
 Connect [DISCO-L475VG-IOT01A](https://os.mbed.com/platforms/ST-Discovery-L475E-IOT01A/) board to laptop using micro USB cable.
 Mbed Studio should recognise the board and allow user to select it for main program.
 
-<img src="./images/studio_device_connection.png" width="800">
-
 **Important**: Use micro usb port on the board marked as `USB STLINK` !
+
+<img src="./images/studio_device_connection.png" width="800">
 
 A green usb icon should appear next to the target indicating that board is connected. Deploy and Debug buttons should be now enabled.
 
@@ -83,7 +83,9 @@ Serial monitor should be automatically attached:
 
 Select either Developers or Administrators group.
 Copy api key after creation.
+
 7. Paste api key in Mbed Studio:
+
 <img src="./images/studio_api_key_add.png" width="800">
 
 ## 7. Connect to Pelion Device Management
