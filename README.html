@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="mbed-studio-workshop">Mbed Studio workshop</h1>
+<h2 id="1-installation">1. Installation</h2>
+<h4 id="offline">Offline</h4>
+<p>Run installer for your platform from <code>installers</code> folder located on usb flash drive.</p>
+<h4 id="online">Online</h4>
+<p>Download Mbed Studio for your platform from <a href="https://os.mbed.com/studio">https://os.mbed.com/studio</a></p>
+<h3 id="windows">Windows</h3>
+<ol>
+<li>On Windows during installation select <code>Install ST-Link USB drivers</code> option. It is required for flashing and debugging ST boards (including DISCO-L475VG-IOT01A) in Mbed Studio on Windows.</li>
+</ol>
+<h2 id="2-login">2. Login</h2>
+<img src="./images/login_studio.png" width="800">
+<p>Use Mbed account to login to Mbed Studio. Skip next step if you have an Mbed account.</p>
+<h3 id="create-mbed-account">Create Mbed account</h3>
+<ol>
+<li>Click <code>Don't have an account? Create one now</code> link to create an account.</li>
+<li>Follow sign up flow and confirm your account.</li>
+</ol>
+<img src="./images/signup_mbed.png" width="800">
+<img src="./images/confirm_mbed.png" width="800">
+<h2 id="3-import-mbed-cloud-client-example">3. Import Mbed Cloud Client Example</h2>
+<h4 id="offline">Offline</h4>
+<p>Unzip <code>mbed-cloud-client-example.zip</code> file located in <code>examples</code> folder on usb flash drive into your workspace: <code>~/Mbed Programs</code>. Restart Mbed Studio if needed.</p>
+<h4 id="online">Online</h4>
+<p>Import <code>mbed-cloud-client-example</code> example using menu : <code>File-&gt;Import Program</code>.</p>
+<p>Url: https://github.com/ARMmbed/mbed-cloud-client-example</p>
+<img src="./images/import_program.png" width="800">
+<p>Depending on internet connection it may take a while. Progress is visible in bottom-right corner of Mbed Studio.</p>
+<h2 id="4-view-libraries-panel">4. View libraries panel</h2>
+<p>Open Libraries panel from menu: <code>View-&gt;Libraries</code></p>
+<img src="./images/studio_libraries.png" width="800">
+<h2 id="5-connect-a-board">5. Connect a board</h2>
+<p>Connect <a href="https://os.mbed.com/platforms/ST-Discovery-L475E-IOT01A/">DISCO-L475VG-IOT01A</a> board to laptop using micro USB cable.
+Mbed Studio should recognise the board and allow user to select it for main program.</p>
+<img src="./images/studio_device_connection.png" width="800">
+<p><strong>Important</strong>: Use micro usb port on the board marked as <code>USB STLINK</code> !</p>
+<p>A green usb icon should appear next to the target indicating that board is connected. Deploy and Debug buttons should be now enabled.</p>
+<img src="./images/studio_connected_target.png" width="400">
+<p>Serial monitor should be automatically attached:</p>
+<img src="./images/studio_empty_serial.png" width="400">
+<h2 id="6-create-pelion-device-management-account">6. Create Pelion Device Management account</h2>
+<ol>
+<li>Open <code>PDM</code> support from menu: <code>View -&gt; Pelion Device Management</code>.</li>
+<li>Click <code>Pelion Device Management Portal</code> link. Skip to point 7 if you already have an api key.</li>
+</ol>
+<img src="./images/pelion_connect.png" width="800">
+<ol start="3">
+<li>Select <code>Log in with another provider</code> and then <code>Log in with account.mbed.com</code> option:</li>
+</ol>
+<img src="./images/login_pelion_mbed.png" width="800">
+<ol start="4">
+<li>Register a <code>PDM</code> account:</li>
+</ol>
+<img src="./images/pelion_register.png" width="800">
+<ol start="5">
+<li>Navigate into <code>portal.mbedcloud.com</code> and login to your account.</li>
+<li>Create api key in portal. <code>Access management -&gt; API keys</code>:</li>
+</ol>
+<img src="./images/login_api_key.png" width="800">
+<p>Select either Developers or Administrators group.
+Copy api key after creation.
+7. Paste api key in Mbed Studio:
+<img src="./images/studio_api_key_add.png" width="800"></p>
+<h2 id="7-connect-to-pelion-device-management">7. Connect to Pelion Device Management</h2>
+<ol>
+<li>Copy <code>DISCO_L475VG_IOT01A</code> targets settings from <code>configs/wifi.json</code> into <code>mbed_app.json</code>:</li>
+</ol>
+<img src="./images/studio_settings.png" width="800">
+<ol start="2">
+<li>Set wifi credentials in <code>mbed_app.json</code>:</li>
+</ol>
+<img src="./images/studio_wifi_password.png" width="800">
+<ul>
+<li>default-wifi-ssid: <code>MbedStudio</code></li>
+<li>default-wifi-password: <code>ilovembed</code></li>
+</ul>
+<ol start="3">
+<li>Create new developer certificate:</li>
+</ol>
+<img src="./images/studio_certificate_creation.png" width="800">
+<ol start="4">
+<li>Select a certificate using <code>plus</code> button:</li>
+</ol>
+<img src="./images/studio_certificate_added.png" width="800">
+<h2 id="8-flash-a-program-on-the-device">8. Flash a program on the device</h2>
+<ol>
+<li>Select <code>115200</code> baud rate from the dropdown on the <code>serial port</code> panel.</li>
+<li>Click <code>Run</code> button on program panel. Mbed Studio will build a program and flash it on the device. Progress will be visible in <code>Output</code> panel and in bottom-right corner of Mbed Studio.</li>
+<li>See logs in <code>serial port</code> panel:</li>
+</ol>
+<img src="./images/studio_serial_monitor.png" width="800">
+<h2 id="9-manage-a-connected-device-in-pelion-device-management">9. Manage a connected device in Pelion Device Management</h2>
+<ol>
+<li>In Pelion Device Management Portal go into <code>Device directory-&gt;Devices</code>:</li>
+</ol>
+<img src="./images/pelion_device_connected.png" width="800">
+<ol start="2">
+<li>Select a device and navigate into <code>RESOURCES</code> tab:</li>
+</ol>
+<img src="./images/pelion_device_resources.png" width="800">
+<ol start="3">
+<li>
+<p>Search for <code>button_resource</code> with path: <code>/3200/0/5501</code> and select it.</p>
+</li>
+<li>
+<p>Click an <code>USER</code> button on <a href="https://os.mbed.com/platforms/ST-Discovery-L475E-IOT01A/">DISCO-L475VG-IOT01A</a> board (big blue button). Graph will automatically update after each press of the <code>USER</code> button:</p>
+</li>
+</ol>
+<img src="./images/pelion_device_button.png" width="800">
+<ol start="5">
+<li><code>Serial monitor</code> panel in Mbed Studio will log information about messages sent to Pelion Device Management:</li>
+</ol>
+<img src="./images/studio_serial_resources.png" width="800">
+<h2 id="8-advanced-topics">8. Advanced Topics</h2>
+<h4 id="debugging">Debugging</h4>
+<p>To start debugging click debug button in program panel. Program will be built and flashed into the device. Debug panel will appear and execution will stop on the first line in main.</p>
+<ul>
+<li>Add breakpoints</li>
+<li>Find in the code callback for <code>User</code> button click. Set breakpoint there and see that program stops after the button is pressed.</li>
+</ul>
+<h4 id="cc-intellisense">C/C++ intellisense</h4>
+<p>Open <code>main.cpp</code> file in editor. Write some code and check how C/C++ intellisense works in Mbed Studio.</p>
+<p>Hint1: Hold ctrl to change variables or imports into links.
+Hint2: There are many C/C++ intellisense actions available on right click in editor. For example: <code>Go to Type definition</code>.
+Hint3: Remove semicolon from any line in editor and see what happens.</p>
+<h4 id="extend-mbed-cloud-client-example-with-additional-functionality">Extend mbed-cloud-client-example with additional functionality</h4>
+<p><a href="https://os.mbed.com/platforms/ST-Discovery-L475E-IOT01A/">DISCO-L475VG-IOT01A</a> board has many sensors built-in. Try to add new resource in <code>main.cpp</code> that exposes a value from a single resource. Read that value in Pelione Device Management Portal.</p>
+<p>Avilable sensors:</p>
+<ul>
+<li>gyroscope/accelerometer/magnetometer</li>
+<li>proximity</li>
+<li>pressure</li>
+<li>humidity</li>
+<li>microphone</li>
+</ul>
+<p>Hint1: Additional libraries may need to be added. To add a library click <code>plus</code> button in <code>Libraries</code> panel:</p>
+<img src="./images/studio_add_library.png" width="800">
+<p>Hint2: https://os.mbed.com/teams/ST/code/HelloWorld_ST_Sensors/ may be useful.</p>
+
+</body>
+</html>
